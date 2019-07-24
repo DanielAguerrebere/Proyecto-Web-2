@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Card Elements Test</title>
-    <link rel="stylesheet" href="SECOND.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </head>
@@ -15,7 +15,7 @@
 
 <div class="container">
     <h2 class="my-4 test-center">Payment Test cost [$20]</h2>
-    <form action="/charge.php" method="post" id="payment-form">
+    <form action="../charge.php" method="post" id="payment-form">
         <div class="form-row">
 
             <input type="text" name="first_name" placeholder="First Name" class="form-control mb-3 StripeElement StripeElement--empty">
@@ -35,6 +35,6 @@
 
     </form>
 </div>
-<script src="THIRD.js"></script>
+<script src="charge.js"></script>
 </body>
 </html>

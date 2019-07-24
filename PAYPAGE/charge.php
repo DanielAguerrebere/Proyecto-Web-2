@@ -40,6 +40,6 @@ $customerData = [
 ];
 
 // Add Customer to DB
-$customer->addCustomer($customerData);
+//$customer->addCustomer($customerData);
 
 header('Location: success.php?tid='.$charge->id.'&product='.$charge->description);
