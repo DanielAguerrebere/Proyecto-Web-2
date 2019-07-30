@@ -4,75 +4,25 @@
     <meta charset="utf-8">
     <title></title>
   </head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-          <!-- Fonts -->
-          <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
-          <!-- Styles -->
-          <style>
-              html, body {
-                  background-color: #fff;
-                  font-family: 'Raleway', sans-serif;
-                  font-weight: 100;
-                  height: 100vh;
-                  margin: 0;
-              }
-              .item{
-                color:black;
-                font-weight: 10000;
-              }
-
-              .full-height {
-                  height: 100vh;
-              }
-
-
-              .position-ref {
-                  position: relative;
-              }
-
-              .top-right {
-                  position: absolute;
-                  right: 10px;
-                  top: 18px;
-              }
-
-              .content {
-                  text-align: center;
-              }
-
-              .title {
-                  font-size: 84px;
-              }
-
-              td,a{
-                  color: #636b6f;
-                  padding: 0 25px;
-                  font-size: 12px;
-                  font-weight: 600;
-                  letter-spacing: .1rem;
-                  text-decoration: none;
-                  text-transform: uppercase;
-              }
-          </style>
-  </style>
   <body>
 
-      <table border="1">
+      <table class="table">
 
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Cost</th>
-            <th>Passengers</th>
+            <th scope="col">Name</th>
+            <th scope="col">Cost</th>
+            <th scope="col">Passengers</th>
           </tr>
         </thead>
 
         <tbody>
           <tr>
-            <td class="item">{{$category->name}} </td>
-            <td class="item">{{$category->cost}} </td>
-            <td class="item">{{$category->passengers}} </td>
+            <td>{{$category->name}} </td>
+            <td>{{$category->cost}} </td>
+            <td>{{$category->passengers}} </td>
           </tr>
         </tbody>
 

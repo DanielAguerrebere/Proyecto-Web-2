@@ -73,17 +73,17 @@
         </div>
       </div>
 
-      <button type="submit" class="btn btn-primary">GO</button>
+      <button type="submit" class="btn btn-primary mx-4 mt-4">Reserve</button>
     </form>
 
     <button onclick="oldForm()" class="btn btn-success mx-4 my-4">Check Reservation</button>
 
     <form action="{{route('reservations.checkReservation')}}" method="post" class="mx-4 my-4" id="oldReservation" style="display: none">
       {{ csrf_field() }}
-      <label for="id_check">Id reservation</label>
-      <input type="text" name="id_check" required>
-      <label for="name">Name</label>
-      <input type="text" name="name" required>
+      <label for="rNumber">Reservation Number:</label>
+      <input type="text" name="rNumber" id="rNumber" required>
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" required>
       <button type="submit" name="button" class="btn btn-success"> Check reservation</button>
     </form>
 @endsection

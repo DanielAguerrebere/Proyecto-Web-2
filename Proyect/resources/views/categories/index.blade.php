@@ -1,108 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cars for Rent</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+</body>
+</html>
 @extends('master')
 @section('content')
-<style media="screen">
-table, th, td {
-    border: 1px solid gray;
-    border-collapse: collapse;
-}
-</style>
-      <div class="title m-b-md">
-        Welcome
-      </div>
-      <h1>Select your type of car</h1>
-      <table style="width:100%">
+    <h3 class="h3">Cars DB</h3>
+      <table class="table mx-4 my-4">
         <thead>
-          <th>Id</th>
-          <th>Name</th>
-          <th>Cost</th>
-          <th>Cities</th>
-        </thead>
-        @foreach($categories as $c)
         <tr>
-          <td class="item"><a href="http://localhost:8000/categories/detail/{{$c->id}}"> {{$c->id}}</a> </td>
-          <td class="item"><a href="http://localhost:8000/categories/detail/{{$c->id}}"> {{$c->name}}</a> </td>
-          <td class="item"><a href="http://localhost:8000/categories/detail/{{$c->id}}"> {{$c->cost}}</a> </td>
-          @foreach($c->locations as $location)
-          <td class="item"><a href="http://localhost:8000/categories/detail/{{$c->id}}"> {{$location->ciudad}}</a> </td>
-          @endforeach
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Cost</th>
+          <th scope="col">Cities</th>
+        </tr>
+        </thead>
+        <tbody>
+          @foreach($categories as $c)
+            <tr>
+              <th scope="row" class="item"><a href="http://localhost:8000/categories/detail/{{$c->id}}"> {{$c->id}}</a> </th>
+              <td><a href="http://localhost:8000/categories/detail/{{$c->id}}"> {{$c->name}}</a> </td>
+              <td><a href="http://localhost:8000/categories/detail/{{$c->id}}"> {{$c->cost}}</a> </td>
+              @foreach($c->locations as $location)
+              <td><a href="http://localhost:8000/categories/detail/{{$c->id}}"> {{$location->ciudad}}</a> </td>
+              @endforeach
             </tr>
-        @endforeach
+          @endforeach
+        </tbody>
       </table>
-      <a href="<?php
-      if(isset($_GET['page']))
-      {
-        $page =$_GET['page'];
-      }
-      else {
-        $page = 1;
-      }
-      $limite_inferior = 1;
-      /*
-      * Es para ir a la primera pagina
-      */
-        echo "http://localhost:8000/categories?page=1";
-        ?>">Primera</a>
-      <a href="<?php
-      /*
-      * Es para retroceder de página
-      */
-      if($page > $limite_inferior)
-      {
-        echo "http://localhost:8000/categories?page=".($page - 1);
-      }
-      else
-      {
-        echo "http://localhost:8000/categories?page=1";
-      }
-        ?>">Anterior</a>
-      <?php
-      /*
-      * Es para crear los numeros de las pagina
-      */
-        for ($i=1; $i <= $categories->lastPage(); $i++):?>
+      <form action="<?php echo "http://localhost:8000/categories/create"?>">
+          <button class="btn btn-success mx-4" type="submit">
+              ADD
+          </button>
+      </form>
 
-        <a href="<?php
-          echo "http://localhost:8000/categories?page=".$i;
-          ?>" id="<?php
-          if($i == $page)
-          {
-            echo "current_page";
-          }
-          else {
-            echo "nocurrent_page";
-          } ?>"><?php echo $i; ?></a>
-
-        <?php
-        endfor;
-       ?>
-
-      <a href="<?php
-      /*
-      * Es para controlar si podemos avanzar de pagina,si si avanzamos,si no nos quedamos
-      */
-      if($page < $i - 1)
-      {
-        echo "http://localhost:8000/categories?page=".($page + 1);
-      }
-      else
-      {
-        echo "http://localhost:8000/categories?page=".$page;
-      }
-        ?>">Siguiente</a>
-
-        <a href="<?php
-        /*
-        * Es para avanzar a la ultima página
-        */
-          echo "http://localhost:8000/categories?page=".($i-1);
-          ?>">Ultima</a>
-
-      <div>
-      </div>
-      <a href="<?php
-      /*
-      * Agregar nuevo
-      */
-        echo "http://localhost:8000/categories/create";
-        ?>">Agregar</a>
 @endsection

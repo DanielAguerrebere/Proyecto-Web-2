@@ -7,18 +7,13 @@
   </head>
   <body>
 
+  <nav class="navbar navbar-light bg-light">
+    <a href="{{route('admin.index')}}" class="navbar-brand h1 mb-0">
+      Car Rental Service
+    </a>
+  </nav>
+
     @yield('content')
-    <br>
-    <button class="btn btn-danger ml-4" onclick="goBack()">Back</button>
 
-      <script>
-      function goBack() {
-        window.history.back();
-      }
-      </script>
-
-    <form action="{{route('admin.index')}}" method="get">
-      <br><button class="btn btn-info ml-4" type="submit">Index</button>
-    </form>
   </body>
 </html>

@@ -16,19 +16,19 @@ class ReservationsController extends Controller
 {
   public function index()
   {
-    return view('Reservation.index');
+    return view('reservation.index');
   }
 
   public function client()
   {
     $locations = Location::all();
-    return view('Reservation.client')->with('locations',$locations);;
+    return view('reservation.client')->with('locations',$locations);;
   }
 
   public function categories(ListAvailableCategoriesRequest $request)
   {
       $categories = Location::find($request['location_start'])->categories;
-      return view('Reservation.categories')->with('categories',$categories)->with(
+      return view('reservation.categories')->with('categories',$categories)->with(
         'location_start',$request['location_start'])->with(
         'location_end',$request['location_end'])->with(
         'start',$request['start'])->with(
@@ -56,7 +56,7 @@ class ReservationsController extends Controller
       $days = date_diff($start, $end)->days;
 
       $price = $days * ($total_extra + $category->cost);
-      return view('Reservation.check')->with('category',$category)->with(
+      return view('reservation.check')->with('category',$category)->with(
         'location_start',$location_start)->with(
         'location_end',$location_end)->with(
         'start',$request['start'])->with(
@@ -75,7 +75,7 @@ class ReservationsController extends Controller
         $location_start = Location::find($reservation->init_place);
         $location_end = Location::find($reservation->final_place);
         $category = Category::find($reservation->category_id);
-        return view('Reservation.checkReservation')->with('category',$reservation->category_id)->with(
+        return view('reservation.checkReservation')->with('category',$reservation->category_id)->with(
           'location_start',$location_start)->with(
           'location_end',$location_end)->with(
           'start',$reservation->init_date)->with(
@@ -96,7 +96,7 @@ class ReservationsController extends Controller
   {
     // Set your secret key: remember to change this to your live secret key in production
     // See your keys here: https://dashboard.stripe.com/account/apikeys
-    \Stripe\Stripe::setApiKey('sk_test_Svkur5SOXoYBHI4AByFEurNz00T7blpWFe');
+    \Stripe\Stripe::setApiKey('sk_test_RzCDWiZFsktRVMO4Iqp7wE8X00qnHwM3Lm');
 
     // Token is created using Checkout or Elements!
     // Get the payment token ID submitted by the form:
@@ -104,7 +104,7 @@ class ReservationsController extends Controller
     $charge = \Stripe\Charge::create([
       'amount' => $request['price'] * 100,
       'currency' => 'mxn',
-      'description' => 'Reservation',
+      'description' => 'reservation',
       'source' => $token,
     ]);
 
@@ -133,7 +133,7 @@ class ReservationsController extends Controller
 
       $location_start = Location::find($request['location_start']);
       $location_end = Location::find($request['location_end']);
-      return view('Reservation.makeReservation')->with('category',$category)->with(
+      return view('reservation.makeReservation')->with('category',$category)->with(
         'location_start',$location_start)->with(
         'location_end',$location_end)->with(
         'start',$request['start'])->with(
@@ -150,7 +150,7 @@ class ReservationsController extends Controller
 
     $extras = Extra::all();
 
-    return view('Reservation.extras')->with('extras',$extras)->with(
+    return view('reservation.extras')->with('extras',$extras)->with(
       'location_start',$request['location_start'])->with(
       'location_end',$request['location_end'])->with(
       'start',$request['start'])->with(
