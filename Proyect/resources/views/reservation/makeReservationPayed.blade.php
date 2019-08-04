@@ -1,7 +1,7 @@
 @extends('master')
 @section('content')
-    <form action="<?php echo "http://localhost:8000/" ?>" class="container">
-        {{ csrf_field() }}
+    <form action="<?php echo "http://localhost:8000"?>" class="container">
+
         <h1 class="h2">This is your reservation number: {{$reservation->id}}</h1>
         <div class="form-control my-2">Thank you {{$name}}</div>
         <div class="form-row">

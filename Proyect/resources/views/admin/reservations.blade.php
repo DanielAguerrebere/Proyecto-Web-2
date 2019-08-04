@@ -1,39 +1,41 @@
 @extends('master')
 @section('content')
-<style media="screen">
-table, th, td {
-    border: 1px solid gray;
-    border-collapse: collapse;
-}
-</style>
-      <div class="title m-b-md">
-        Reservations
-      </div>
+
       <br>
-      <table style="width:100%">
+      <table class="table">
         <thead>
-          <th>id</th>
-          <th>name</th>
-          <th>category_id</th>
-          <th>init_date</th>
-          <th>final_date</th>
-          <th>init_place</th>
-          <th>final_place</th>
-          <th>price</th>
-          <th>extras</th>
+        <tr>
+            <th scope="col">R. Number</th>
+            <th scope="col">Action</th>
+            <th scope="col">Name</th>
+            <th scope="col">Category</th>
+            <th scope="col">initial date</th>
+            <th scope="col">final date</th>
+            <th scope="col">initial place</th>
+            <th scope="col">final place</th>
+            <th scope="col">price</th>
+            <th scope="col">extras</th>
+        </tr>
         </thead>
         @foreach($reservations as $reservation)
         <tr>
-          <td class="item"> {{$reservation->id}}</a> </td>
-          <td class="item"> {{$reservation->name}}</a> </td>
-          <td class="item"> {{$reservation->category_id}}</a> </td>
-          <td class="item"> {{$reservation->init_date}}</a> </td>
-          <td class="item"> {{$reservation->final_date}}</a> </td>
-          <td class="item"> {{$reservation->init_place}}</a> </td>
-          <td class="item"> {{$reservation->final_place}}</a> </td>
-          <td class="item"> {{$reservation->price}}</a> </td>
+          <td> {{$reservation->id}} </td>
+          <td>
+              <form action="<?php echo "http://localhost:8000/delete/"?>{{$reservation->id}}" class="my-1">
+                  <button class="btn btn-danger mx-1" type="submit">
+                      DELETE
+                  </button>
+              </form>
+          </td>
+          <td> {{$reservation->name}} </td>
+          <td> {{$reservation->category_id}} </td>
+          <td> {{$reservation->init_date}} </td>
+          <td> {{$reservation->final_date}} </td>
+          <td> {{$reservation->init_place}} </td>
+          <td> {{$reservation->final_place}} </td>
+          <td> {{$reservation->price}} </td>
           @foreach($reservation->extras as $extra)
-            <td class="item"> {{$extra->name}}</a> </td>
+            <td> {{$extra->name}} </td>
           @endforeach
         </tr>
         @endforeach

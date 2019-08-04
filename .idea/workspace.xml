@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8eca3c8d-c97c-4056-a4c7-8154124c2696" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Proyect/resources/views/stripe/charge.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Proyect/resources/views/stripe/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Proyect/resources/views/stripe/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Proyect/resources/views/stripe/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyect/app/Http/Controllers/ReservationsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Proyect/app/Http/Controllers/ReservationsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyect/resources/views/Reservation/categories.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Proyect/resources/views/reservation/categories.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyect/resources/views/Reservation/check.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Proyect/resources/views/reservation/check.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyect/resources/views/Reservation/checkReservation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Proyect/resources/views/reservation/checkReservation.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyect/resources/views/Reservation/client.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Proyect/resources/views/reservation/client.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyect/resources/views/Reservation/extras.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Proyect/resources/views/reservation/extras.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyect/resources/views/Reservation/makeReservation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Proyect/resources/views/reservation/makeReservation.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyect/resources/views/categories/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Proyect/resources/views/categories/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyect/resources/views/categories/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Proyect/resources/views/categories/detail.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyect/resources/views/categories/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Proyect/resources/views/categories/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyect/resources/views/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Proyect/resources/views/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyect/resources/views/stripe.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyect/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/Proyect/resources/views/welcome.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="8eca3c8d-c97c-4056-a4c7-8154124c2696" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Proyect/resources/views/master.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="33" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="33" />
+            <state relative-caret-position="255">
+              <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -58,7 +39,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Proyect/resources/views/reservation/makeReservation.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="663">
@@ -239,7 +220,7 @@
       <option name="presentableId" value="Default" />
       <updated>1563403803303</updated>
       <workItem from="1563403821392" duration="1733000" />
-      <workItem from="1564494984166" duration="10362000" />
+      <workItem from="1564494984166" duration="11047000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1564011763524</created>
@@ -259,11 +240,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13522000" />
+    <option name="totallyTimeSpent" value="14207000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="916" height="1586" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="1" side_tool="true" />
@@ -510,13 +490,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Proyect/resources/views/master.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Proyect/resources/views/reservation/check.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -533,6 +506,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Proyect/resources/views/master.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
         </state>
       </provider>
     </entry>

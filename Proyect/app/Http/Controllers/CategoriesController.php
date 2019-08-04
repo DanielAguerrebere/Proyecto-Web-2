@@ -27,7 +27,7 @@ class CategoriesController extends Controller
         $locations = Location::all();
         return view('categories.create')->with('locations',$locations);
       }
-      public function store()
+      public function insert()
       {
         $name = $_POST['name'];
         $passengers = $_POST['passengers'];
@@ -60,15 +60,23 @@ class CategoriesController extends Controller
         $name = $_POST['name'];
         $passengers = $_POST['passengers'];
         $cost = $_POST['cost'];
-        $data = array('name'=>$name,'passengers'=>$passengers,'cost'=>$cost);
-        Category::where('id',$id)->update($data);
-        $category = Category::find($id);
-        $category->locations()->detach();
-        foreach ($_POST['location'] as $location)
+        $locations = $_POST['location'];
+
+
+          $category = Category::find($id);
+          $category->locations()->detach();
+          $data = array('name'=>$name,'passengers'=>$passengers,'cost'=>$cost);
+          Category::where('id',$id)->update([
+              'name' => $name,
+              'passengers' => $passengers,
+              'cost' => $cost
+          ]);
+
+          foreach ($locations as $location)
         {
           $category->locations()->attach([$location]);
         }
-        return redirect()->action('CategoriesController@index');
+          return redirect()->action('CategoriesController@index');
       }
 
 }
